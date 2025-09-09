@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman dengan Teks Panjang</title>
+    <style>
+        /* Pengaturan dasar untuk halaman */
+        body {
+            font-family: 'Helvetica Neue', sans-serif; /* Jenis font yang modern dan mudah dibaca */
+            margin: 0;
+            padding: 0;
+            color: white; /* Warna teks utama */
+            overflow: hidden; /* Mencegah scroll pada body utama */
+        }
+
+        /* Pengaturan untuk latar belakang animasi */
+        .background-container {
+            position: fixed; /* Membuat background tetap di tempat saat di-scroll */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Meletakkan background di belakang konten */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        /* Animasi untuk gradasi warna */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Kontainer utama untuk mengatur posisi konten di tengah */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Mengisi seluruh tinggi layar */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Kotak untuk menampung teks */
+        .text-box {
+            background: rgba(0, 0, 0, 0.6); /* Latar belakang semi-transparan agar teks mudah dibaca */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(4px); /* Efek blur pada background di belakang kotak */
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 80%;
+            max-width: 800px;
+            height: 80vh; /* Tinggi kotak 80% dari tinggi layar */
+            overflow-y: auto; /* Ini yang membuat teks bisa di-scroll jika lebih panjang dari kotaknya */
+        }
+
+        /* Pengaturan untuk judul */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        /* Pengaturan untuk paragraf */
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-container"></div>
+
+    <div class="main-container">
+        <div class="text-box">
+            <h1>Judul Tulisan Anda</h1>
+            <p>
+                Di sini Anda bisa menulis teks yang sangat panjang. Jika teksnya melebihi tinggi kotak yang sudah ditentukan, maka secara otomatis akan muncul scrollbar di sisi kanan kotak ini. Desain ini memastikan bahwa latar belakang keren Anda tetap terlihat penuh tanpa terganggu oleh panjangnya halaman.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Anda bisa menambahkan paragraf sebanyak yang Anda mau. Coba salin dan tempel paragraf di atas berulang kali untuk melihat efek scroll-nya bekerja. Latar belakang semi-transparan pada kotak teks ini membantu keterbacaan tulisan Anda tanpa menutupi sepenuhnya keindahan gradasi warna di belakangnya.
+            </p>
+            <p>
+                Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.
+            </p>
+             <p>
+                Aliquam faucibus, elit ut dictum alique, leo lacus accumsan metus, ut consectetur magna nunc vitae nisl. Aliquam erat volutpat. Ut magna. Praesent id lorem. Sed arcu. Nunc a erat.
+            </p>
+             <p>
+                Phasellus ac turpis. Proin nec massa. Cras nec eros. Vivamus quis massa. Proin feugiat. Sed et eros. Quisque varius, lectus et accumsan aliquam, justo nisi tincidunt dui, vel consequat justo erat nec sem.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
